@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="./css/RESET.css" />
+    <link rel="stylesheet" href="./css/GLOBAL.css" />
+    <link rel="stylesheet" href="./css/admin_home.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo" />
+
+      <div class="middle_header">
+        <nav id="right_nav">
+          <button id="logoutBtn">Logout</button>
+          <div class="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"
+                />
+                <path
+                  d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"
+                />
+              </g>
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin-main-container">
+        <!-- Left Panel: Product Table -->
+        <section class="admin-left-panel">
+          <button class="btn-preview">Preview Store</button>
+
+          <table class="admin-product-table">
+            <thead>
+              <tr>
+                <th style="width: 10%">No.</th>
+                <th style="width: 70%">Product Name</th>
+                <th style="width: 20%">Edit</th>
+              </tr>
+            </thead>
+
+            <tbody id="adminShoeTableBody"></tbody>
+          </table>
+        </section>
+
+        <!-- Right Panel: Add Product Form Card -->
+        <aside class="admin-right-panel">
+          <div class="add-product-card">
+            <h2>Add New Product</h2>
+
+            <!-- Media & Variations Upload -->
+            <div class="media-upload-section">
+              <button class="main-image-upload">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="white" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2v-6Z" />
+                </svg>
+              </button>
+
+              <div class="upload-options">
+                <div class="option-group">
+                  <label>Add Color</label>
+                  <button class="circle-btn-add">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="white"
+                        d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2v-6Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="option-group">
+                  <label>Add Size</label>
+                  <button class="square-btn-add">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#b8b8b8"
+                        d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2v-6Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Inputs -->
+            <form
+              id="addProductForm"
+              class="product-form"
+              onsubmit="event.preventDefault()"
+            >
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  type="text"
+                  id="shoeName"
+                  class="input-pill"
+                  placeholder="Shoe name..."
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Category</label>
+                <input
+                  type="text"
+                  id="shoeCategory"
+                  class="input-pill"
+                  placeholder="e.g. Men's Shoes"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Price (Rp)</label>
+                <input
+                  type="number"
+                  id="shoePrice"
+                  class="input-pill"
+                  placeholder="e.g. 1500000"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Description</label>
+                <textarea
+                  id="shoeDescription"
+                  class="input-area"
+                  placeholder="Shoe description..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Image URL</label>
+                <input
+                  type="text"
+                  id="shoeImage"
+                  class="input-pill"
+                  placeholder="https://..."
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="productStatus">Product Status:</label>
+                <select id="productStatus" name="status">
+                  <option value="new_release">New Release</option>
+                  <option value="regular">Regular</option>
+                </select>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="submit-product-btn">
+                  Add Product
+                </button>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="./js/supabaseClient.js"></script>
+    <script src="./js/authCheck.js"></script>
+    <script src="./js/adminHome.js"></script>
+    <script src="./js/logout.js"></script>
+  </body>
+</html>

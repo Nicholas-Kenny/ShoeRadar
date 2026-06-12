@@ -1,0 +1,344 @@
+/* layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+/* end of layout */
+
+
+
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(0, 0, 0, 0.2);
+
+    padding: 0.4rem 1rem;
+}
+
+#header img {
+    height: 22px;
+    width: auto;
+}
+
+
+
+/* middle header */
+.middle_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(6rem, 5vw, 14rem);
+}
+
+
+
+/* navbar */
+#nav ul{
+    display: flex;
+    gap: clamp(1rem, 4vw, 3rem);
+
+    list-style-type: none;
+}
+
+#nav ul a {
+    color: rgb(150, 150, 150);
+}
+
+#nav ul a:hover {
+    color: black;
+}
+
+#nav ul a.active {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#right_nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logoutBtn {
+    background-color: rgb(232, 232, 232);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-family: Alata;
+    font-size: 0.95rem;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#logoutBtn:hover {
+    color: black;
+}
+/* end of navbar */
+
+
+/* search_bar */
+.search_box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(232, 232, 232);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+}
+
+.search_box svg {
+    align-self: center;
+    color: rgb(150, 150, 150);
+}
+
+.search_box svg:hover {
+    color: black;
+}
+
+.search_box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Alata;
+}
+/* end of search bar */
+/* end of middle header */
+/* end of header */
+
+/* cart logo */
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cart svg {
+    color: rgb(150, 150, 150);
+}
+
+.cart:hover svg {
+    color: black;
+}
+
+/* profile logo */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profile svg {
+    color: rgb(150, 150, 150);
+}
+
+.profile:hover svg {
+    color: black;
+}
+
+
+
+
+/*controls*/
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.filters, .sort {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filters, .sort {
+    position: relative;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.15);
+    border-radius: 0.2rem;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+    z-index: 100;
+    transform: translateY(-30px);
+
+    /* hidden as default */
+    opacity: 0;
+}
+
+.options a {
+    padding: 0.4rem 0.6rem;
+    color: rgb(100, 100, 100);
+    opacity: 1;  
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.options a:hover {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+.filters h5:hover, .sort h5:hover {
+    font-weight: bold;
+}
+
+
+.sorting {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0.1rem;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.15);
+    border-radius: 0.2rem;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+    z-index: 100;
+    transform: translateY(-30px);
+
+    /* hidden as default */
+    opacity: 0;
+}
+
+.sorting a {
+    padding: 0.4rem 0.6rem;
+    color: rgb(100, 100, 100);
+    opacity: 1;  
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.sorting a:hover {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+/* end of controls */
+
+
+
+.new_releases {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 0rem; */
+}
+
+
+
+/* showcase wrapper (title and shoes)*/
+.newreleases_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    padding: 0rem 4rem 0;
+    gap: 0.5rem;
+}
+/* end of showcase wrapper */
+
+
+
+/* shoe_selection_container (shoe container wrapper) */
+.shoes_selection_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 24px;
+}
+/* end of shoe_selection_container */
+
+
+
+/* shoe container (shoe and caption) */
+.shoe_container img {
+    height: 200px;
+    width: auto;
+}
+
+.shoe_type {
+    color: gray;
+}
+
+.date {
+    margin-top: 0.4rem;
+    color: gray;
+    
+}
+
+/* end of shoe container */
+/* end of showcase */
+
+
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(212, 212, 212);
+    border-top: solid 1px rgb(0, 0, 0, 0.2);
+    padding: 0.1rem 3rem 1.5rem;
+}
+
+footer a {
+    opacity: 50%;
+    color: black;
+}
+
+/* left footer */
+.left_footer {
+    display: flex;
+    gap: clamp(2rem, 7vw, 9rem);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+
+}
+
+.column h5 {
+    margin-bottom: 0.4rem;
+    margin-top: 1.5rem;
+}
+/* end of left footer */
+
+/* right footer */
+.right_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.right_footer img {
+    width: auto;
+    height: 40px;
+}
+/* end of right footer */
+/* end of footer */

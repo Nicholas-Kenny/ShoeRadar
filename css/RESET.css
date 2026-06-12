@@ -1,0 +1,8 @@
+html, body, form, fieldset, h1, h2, h4, p, ul, img, input,
+button, figure, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+}

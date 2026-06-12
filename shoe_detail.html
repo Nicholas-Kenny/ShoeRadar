@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Detail</title>
+    <link rel="stylesheet" href="./css/RESET.css">
+    <link rel="stylesheet" href="./css/GLOBAL.css">
+    <link rel="stylesheet" href="./css/shoe_detail.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <a href="./home.html">
+            <div class="back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 12 24"><path fill="#000000" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg>
+                <h5>Back</h5>
+            </div>
+        </a>
+
+        <div class="middle_header">
+            <nav id="nav">
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./new_releases.html">New Releases</a></li>
+                    <li><a href="./collections.html">Collections</a></li>
+                    <li><a href="./locations.html">Locations</a></li>
+                    
+                </ul>
+            </nav>
+
+            <nav id="right_nav">
+                
+                <div class="search_box">
+                    <input type="text" placeholder="Search for shoes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/></svg>
+                </div>
+
+                <a href="cart.html">
+                    <div class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                <path d="M3 6h18l-2 13H5L3 6z"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                <path d="M10 10v4"/>
+                                <path d="M14 10v4"/>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                
+
+                <button id="logoutBtn">Logout</button>
+                <div class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"/><path d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
+                </div>
+            </nav>
+            
+        </div>    
+
+        
+    </header>
+
+    <main>
+        <div class="shoe_detail_container">
+            <div class="left">
+                <img src="./images/shoe_Detail.png" alt="">
+                    
+                <!-- <div class="color_picker">
+                    <p>Choose Color</p>
+
+                    <div class="colors">
+                        <button class="color active" style="background-color: #F06080;"></button>
+                        <button class="color" style="background-color: #D4CC7A;"></button>
+                        <button class="color" style="background-color: #1A1A1A;"></button>
+                        <button class="color" style="background-color: #808080;"></button>
+                        <button class="color" style="background-color: #6AABDB;"></button>
+                    </div>
+                </div>
+
+                <div class="size_picker">
+                    <p>Choose Size</p>
+                    <div class="sizes">
+                        <button class="size">35</button>
+                        <button class="size">36</button>
+                        <button class="size">37</button>
+                        <button class="size">38</button>
+                        <button class="size">39</button>
+                        <button class="size">40</button>
+                        <button class="size">41</button>
+                        <button class="size">42</button>
+                        <button class="size">43</button>
+                        <button class="size">44</button>
+                        <button class="size">45</button>
+                        <button class="size">46</button>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="right">
+                <!-- <p class="shoe_category">WOMEN'S SHOES</p>
+                <h2 class="shoe_name">Nike P-6000</h2>
+                <p class="shoe_price">Rp 1.429.000</p>
+                <p class="shoe_desc">The Nike P-6000 is a lifestyle sneaker inspired by early 2000s running shoes. It combines retro performance design with modern streetwear appeal, making it popular for both casual wear and fashion styling.</p>
+                <p class="release_date">Release Date: 18 Desember 2025</p>
+
+                <div class="locations">
+                    <p><strong>Available Locations</strong></p>
+                    <ul>
+                        <li><a href="./locations.html">Nike Factory Store Alam Sutera</a> <span class="stock">(Stock: 12)</span></li>
+                        <li><a href="./locations.html">Nike Summarecon Mall Serpong</a> <span class="stock">(Stock: 5)</span></li>
+                        <li><a href="./locations.html">Nike Aeon Mall BSD City</a> <span class="stock">(Stock: 7)</span></li>
+                    </ul>
+                </div> -->
+                <h1 id="detailName" class="shoe_name">Loading...</h1>
+                <p id="detailCategory" class="shoe_category"></p>
+                <p id="detailPrice" class="shoe_price"></p>
+                <p id="detailDescription" class="shoe_description"></p>
+
+                <select id="storeSelector" class="input-pill">
+                    <option value="">Select a store to check stock</option>
+                </select>
+                <p id="stockDisplay" style="margin-top: 10px; font-weight: bold;"></p>
+
+                <button class="add_to_cart">
+                    ADD TO CART
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M17 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.75 1.03H8.1l-.9 1.63L7.17 15H19v2H7a2 2 0 0 1-2-1.75c0-.25.05-.5.14-.73L6.82 12L3 4H1zm6 16a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2"/></svg>
+                </button>
+            </div>
+        </div>
+        
+</div>
+        
+    </main>
+
+    <footer>
+        <div class="left_footer">
+            <div class="column">
+                <h5>Help</h5>
+                <a href="">FAQ</a>
+                <a href="">Contact Us</a>
+            </div>
+
+            <div class="column">
+                <h5>Company</h5>
+                <a href="">About Nike</a>
+                <a href="">New Releases</a>
+            </div>
+            
+            <div class="column">
+                <h5>Terms and Conditions</h5>
+                <a href="">Privacy Policy</a>
+                <a href="">Cookie Policy</a>
+                <a href="">Legal Notice</a>
+            </div>
+        </div>
+
+        <div class="right_footer">
+            <img src="./images/shoeradar_logo_2.png" alt="shoe_radar_logo">
+            <p>@ShoeRadar 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const addToCartBtn =
+        document.querySelector(".add_to_cart");
+
+    addToCartBtn.addEventListener("click", () => {
+
+        const shoe = {
+            id: document
+                .querySelector(".shoe_name")
+                .textContent
+                .trim(),
+
+            name: document
+                .querySelector(".shoe_name")
+                .textContent
+                .trim(),
+
+            category: document
+                .querySelector(".shoe_category")
+                .textContent
+                .trim(),
+
+            price: Number(
+                document
+                    .querySelector(".shoe_price")
+                    .textContent
+                    .replace("Rp", "")
+                    .replace(/\./g, "")
+                    .replace(/,/g, "")
+                    .trim()
+            ),
+
+            image: document
+                .querySelector(".left img")
+                .getAttribute("src"),
+
+            quantity: 1
+        };
+
+        let cart =
+            JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+
+        const existing =
+            cart.find(item =>
+                item.id === shoe.id
+            );
+
+        if(existing){
+            existing.quantity += 1;
+        }
+        else{
+            cart.push(shoe);
+        }
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(cart)
+        );
+
+        alert(`${shoe.name} added to cart!`);
+    });
+
+});
+</script>
+<script src="./js/products.js"></script>
+<script>
+const params =
+    new URLSearchParams(window.location.search);
+
+const id =
+    params.get("id");
+
+const shoe =
+    products[id];
+
+if(shoe){
+
+    document.querySelector(".shoe_name")
+        .textContent = shoe.name;
+
+    document.querySelector(".shoe_category")
+        .textContent = shoe.category;
+
+    document.querySelector(".shoe_price")
+        .textContent =
+        "Rp " +
+        shoe.price.toLocaleString("id-ID");
+
+    document.querySelector(".shoe_image")
+        .src = shoe.image;
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="./js/supabaseClient.js"></script>
+<script src="./js/shoeDetail.js"></script>
+<script src="./js/logout.js"></script>
+<script src="./js/searchShoes.js"></script>
+</html>

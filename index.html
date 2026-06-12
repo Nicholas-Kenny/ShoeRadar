@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/RESET.css">
+    <link rel="stylesheet" href="./css/GLOBAL.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login_container"> 
+        <header id="header">
+                <img src="./images/shoeradar_logo.png" alt="shoeradar_logo">
+        </header>
+
+        <form id="login-form">
+            <fieldset id="inputs">
+                <div class="log_sign_border">
+                    <div class="log_in_border">
+                        <h2 class="log_in">Log in</h2>
+                    </div>
+                    <div class="sign_up_border">
+                        <h2>Sign up</h2>
+                    </div>
+                </div>
+
+                <p>
+                    <label for="">Email</label>
+                    <input id="username" type="email" required>
+                </p>
+
+                <p>
+                    <label for="">Password</label>
+                    <input id="password" type="password" required>
+                </p>
+
+                <a href="">Forgot password?</a>
+
+                <button>Log in</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="background_container">
+    
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="./js/supabaseClient.js"></script>
+<script src="./js/login.js"></script>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locations</title>
+    <link rel="stylesheet" href="./css/RESET.css" />
+    <link rel="stylesheet" href="./css/GLOBAL.css" />
+    <link rel="stylesheet" href="./css/locations.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo" />
+
+      <div class="middle_header">
+        <nav id="nav">
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./new_releases.html">New Releases</a></li>
+            <li><a href="./collections.html">Collections</a></li>
+            <li><a href="./locations.html" class="active">Locations</a></li>
+          </ul>
+        </nav>
+
+        <nav id="right_nav">
+          <div class="search_box">
+            <input
+              type="text"
+              id="locationSearch"
+              placeholder="Search Location"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"
+              />
+            </svg>
+          </div>
+
+          <a href="cart.html">
+            <div class="cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 6h18l-2 13H5L3 6z" />
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  <path d="M10 10v4" />
+                  <path d="M14 10v4" />
+                </g>
+              </svg>
+            </div>
+          </a>
+
+          <button id="logoutBtn">Logout</button>
+          <div class="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"
+                />
+                <path
+                  d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"
+                />
+              </g>
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-locations">
+        <img
+          src="./images/location/city.png"
+          alt="City Skyline"
+          class="hero-bg-image"
+        />
+
+        <div class="hero-gradient-overlay"></div>
+
+        <div class="hero-content">
+          <h1>Locations</h1>
+          <div class="location-search">
+            <input
+              type="text"
+              id="heroLocationSearch"
+              placeholder="Enter your city"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="locations-container" id="locationsContainer"></section>
+    </main>
+
+    <footer>
+      <div class="left_footer">
+        <div class="column">
+          <h5>Help</h5>
+          <a href="">FAQ</a>
+          <a href="">Contact Us</a>
+        </div>
+
+        <div class="column">
+          <h5>Company</h5>
+          <a href="">About Nike</a>
+          <a href="">New Releases</a>
+        </div>
+
+        <div class="column">
+          <h5>Terms and Conditions</h5>
+          <a href="">Privacy Policy</a>
+          <a href="">Cookie Policy</a>
+          <a href="">Legal Notice</a>
+        </div>
+      </div>
+
+      <div class="right_footer">
+        <img src="./images/shoeradar_logo_2.png" alt="shoe_radar_logo" />
+        <p>@ShoeRadar 2026. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/loadLocations.js"></script>
+  <script src="./js/logout.js"></script>
+  <script src="./js/searchLocations.js"></script>
+</html>

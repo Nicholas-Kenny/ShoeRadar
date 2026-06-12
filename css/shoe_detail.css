@@ -1,0 +1,367 @@
+/* layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+/* end of layout */
+
+/* color picker */
+.color_picker {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.colors {
+    display: flex;
+    gap: 1rem;
+}
+
+.color {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    outline: 2px solid rgb(169, 169, 169);
+    outline-offset: 2px;
+}
+
+.color.active {
+    outline: 2px solid black;
+}
+
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(0, 0, 0, 0.2);
+
+    padding: 0.4rem 1rem;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back h5 {
+    margin: 0;
+}
+
+.back:hover h5 {
+    text-decoration: underline;
+}
+
+
+
+/* middle header */
+.middle_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(6rem, 5vw, 14rem);
+}
+
+
+
+/* navbar */
+#nav ul{
+    display: flex;
+    gap: clamp(1rem, 4vw, 3rem);
+
+    list-style-type: none;
+}
+
+#nav ul a {
+    color: rgb(150, 150, 150);
+    display: flex;
+    align-items: center;
+}
+
+#nav ul a:hover {
+    color: black;
+}
+
+#nav ul a.active {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#right_nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logoutBtn {
+    background-color: rgb(232, 232, 232);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-family: Alata;
+    font-size: 0.95rem;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#logoutBtn:hover {
+    color: black;
+}
+/* end of navbar */
+
+
+/* search_bar */
+.search_box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(232, 232, 232);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+}
+
+.search_box svg {
+    align-self: center;
+    color: rgb(150, 150, 150);
+}
+
+.search_box svg:hover {
+    color: black;
+}
+
+.search_box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Alata;
+}
+/* end of search bar */
+/* end of middle header */
+/* end of header */
+
+/* cart logo */
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cart svg {
+    color: rgb(150, 150, 150);
+}
+
+.cart:hover svg {
+    color: black;
+}
+
+/* profile logo */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profile svg {
+    color: rgb(150, 150, 150);
+}
+
+.profile:hover svg {
+    color: black;
+}
+
+
+
+
+/* shoe detail left */
+.shoe_detail_container {
+    display: flex;
+    gap: 4rem;
+    padding: 2rem 4rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1.5;
+}
+
+.left img {
+    width: 100%;
+    height: auto;
+}
+
+.color_picker, .size_picker {
+    padding: 0rem 2rem;
+    margin-right: 2rem;
+}
+
+
+/* size */
+.size_picker {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.size {
+    width: 48px;
+    height: 37px;
+    border: 1.5px solid rgb(0, 0, 0, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+}
+
+.size:hover {
+    border-color: black;
+}
+
+.size.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+/* end of size */
+/* end of left */
+
+
+/* shoe detail right */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.shoe_category {
+    color: gray;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.shoe_price {
+    font-size: 1.3rem;
+}
+
+.shoe_desc {
+    color: rgb(60, 60, 60);
+    line-height: 1.6;
+}
+
+.release_date {
+    color: gray;
+}
+
+.locations ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.locations a {
+    color: black;
+}
+
+.locations a:hover {
+    text-decoration: underline;
+}
+
+.stock {
+    color: gray;
+    margin-left: 0.5rem;
+}
+
+
+.add_to_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border: none;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.add_to_cart:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(212, 212, 212);
+    border-top: solid 1px rgb(0, 0, 0, 0.2);
+    padding: 0.1rem 3rem 1.5rem;
+}
+
+footer a {
+    opacity: 50%;
+    color: black;
+}
+
+/* left footer */
+.left_footer {
+    display: flex;
+    gap: clamp(2rem, 7vw, 9rem);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+
+}
+
+.column h5 {
+    margin-bottom: 0.4rem;
+    margin-top: 1.5rem;
+}
+/* end of left footer */
+
+/* right footer */
+.right_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.right_footer img {
+    width: auto;
+    height: 40px;
+}
+/* end of right footer */
+/* end of footer */

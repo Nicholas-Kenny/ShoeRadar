@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Releases</title>
+    <link rel="stylesheet" href="./css/RESET.css" />
+    <link rel="stylesheet" href="./css/GLOBAL.css" />
+    <link rel="stylesheet" href="./css/new_releases.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo" />
+
+      <div class="middle_header">
+        <nav id="nav">
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="" class="active">New Releases</a></li>
+            <li><a href="./collections.html">Collections</a></li>
+            <li><a href="./locations.html">Locations</a></li>
+          </ul>
+        </nav>
+
+        <nav id="right_nav">
+          <div class="search_box">
+            <input type="text" placeholder="Search for shoes" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"
+              />
+            </svg>
+          </div>
+
+          <a href="cart.html">
+            <div class="cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 6h18l-2 13H5L3 6z" />
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  <path d="M10 10v4" />
+                  <path d="M14 10v4" />
+                </g>
+              </svg>
+            </div>
+          </a>
+
+          <button id="logoutBtn">Logout</button>
+          <div class="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"
+                />
+                <path
+                  d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"
+                />
+              </g>
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="new_releases">
+        <div class="newreleases_wrapper">
+          <div class="top">
+            <h4>All Products (4)</h4>
+
+            <div class="controls">
+              <div class="filters">
+                <h5>Filters</h5>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.7"
+                    d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"
+                  />
+                </svg>
+
+                <div class="options">
+                  <a href="">All</a>
+                  <a href="">Men's Shoes</a>
+                  <a href="">Women's Shoes</a>
+                  <a href="">Basketball Shoes</a>
+                  <a href="">Running Shoes</a>
+                  <a href="">Football Shoes</a>
+                  <a href="">Tennis Shoes</a>
+                </div>
+              </div>
+
+              <div class="sort">
+                <h5>Sort By</h5>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-width="1.9"
+                    d="M3 6h18M6 12h12m-9 6h6"
+                  />
+                </svg>
+
+                <div class="sorting">
+                  <a href="">Price: Low to High</a>
+                  <a href="">Price: High to Low</a>
+                  <a href="">Newest</a>
+                  <a href="">Oldest</a>
+                  <a href="">Popularity</a>
+                  <a href="">A-Z</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="newReleaseContainer" class="shoes_selection_container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="left_footer">
+        <div class="column">
+          <h5>Help</h5>
+          <a href="">FAQ</a>
+          <a href="">Contact Us</a>
+        </div>
+
+        <div class="column">
+          <h5>Company</h5>
+          <a href="">About Nike</a>
+          <a href="">New Releases</a>
+        </div>
+
+        <div class="column">
+          <h5>Terms and Conditions</h5>
+          <a href="">Privacy Policy</a>
+          <a href="">Cookie Policy</a>
+          <a href="">Legal Notice</a>
+        </div>
+      </div>
+
+      <div class="right_footer">
+        <img src="./images/shoeradar_logo_2.png" alt="shoe_radar_logo" />
+        <p>@ShoeRadar 2026. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/loadNewReleases.js"></script>
+  <script src="./js/logout.js"></script>
+  <script src="./js/searchShoes.js"></script>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Edit</title>
+    <link rel="stylesheet" href="./css/RESET.css" />
+    <link rel="stylesheet" href="./css/GLOBAL.css" />
+    <link rel="stylesheet" href="./css/admin_home.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo" />
+
+      <div class="middle_header">
+        <nav id="right_nav">
+          <div class="profile">
+            <button id="logoutBtn">Logout</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"
+                />
+                <path
+                  d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"
+                />
+              </g>
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin-main-container">
+        <!-- Left Panel: Product Table -->
+        <section class="admin-left-panel">
+          <button class="btn-preview">Preview Store</button>
+
+          <table class="admin-product-table">
+            <thead>
+              <tr>
+                <th style="width: 10%">No.</th>
+                <th style="width: 70%">Product Name</th>
+                <th style="width: 20%">Edit</th>
+              </tr>
+            </thead>
+
+            <tbody id="shoeTableBody"></tbody>
+          </table>
+        </section>
+
+        <!-- Right Panel: Edit Product Form Card -->
+        <aside class="admin-right-panel">
+          <div
+            class="add-product-card"
+            style="max-height: 85vh; overflow-y: auto"
+          >
+            <h2>Edit Product Info</h2>
+            <form
+              id="editProductForm"
+              class="product-form"
+              onsubmit="event.preventDefault()"
+            >
+              <div class="form-group">
+                <label>Name</label
+                ><input type="text" id="shoeName" class="input-pill" required />
+              </div>
+              <div class="form-group">
+                <label>Category</label
+                ><input
+                  type="text"
+                  id="shoeCategory"
+                  class="input-pill"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Price (Rp)</label
+                ><input
+                  type="number"
+                  id="shoePrice"
+                  class="input-pill"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Description</label
+                ><textarea id="shoeDescription" class="input-area"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Image URL</label
+                ><input
+                  type="text"
+                  id="shoeImage"
+                  class="input-pill"
+                  required
+                />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="submit-product-btn">
+                  Update Product
+                </button>
+              </div>
+            </form>
+
+            <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ccc" />
+
+            <h2>Manage Inventory</h2>
+            <div
+              id="currentInventoryList"
+              style="margin-bottom: 15px; font-size: 0.9rem; color: #333"
+            ></div>
+
+            <form
+              id="inventoryForm"
+              class="product-form"
+              onsubmit="event.preventDefault()"
+            >
+              <div class="form-group">
+                <label>Select Store</label>
+                <select
+                  id="storeSelect"
+                  class="input-pill"
+                  style="width: 100%; color: black; background-color: #b8b8b8"
+                  required
+                ></select>
+              </div>
+              <div class="form-group">
+                <label>Set Stock Quantity</label>
+                <input
+                  type="number"
+                  id="storeStock"
+                  class="input-pill"
+                  placeholder="e.g. 10"
+                  required
+                />
+              </div>
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="submit-product-btn"
+                  style="background-color: #4caf50"
+                >
+                  Update Stock
+                </button>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/authCheck.js"></script>
+  <script src="./js/adminEdit.js"></script>
+  <script src="./js/logout.js"></script>
+</html>
