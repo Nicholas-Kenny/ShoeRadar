@@ -11,11 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const price = Number(document.getElementById("shoePrice").value);
     const description = document.getElementById("shoeDescription").value.trim();
     const image_url = document.getElementById("shoeImage").value.trim();
+    const release_date =
+      document.getElementById("shoeReleaseDate").value || null;
+    const status = document.getElementById("productStatus").value;
 
-    // Insert ke database (tabel shoes)
     const { error } = await window.db
       .from("shoes")
-      .insert([{ name, category, price, description, image_url }]);
+      .insert([
+        { name, category, price, description, image_url, release_date, status },
+      ]);
 
     if (error) {
       alert("Failed to add product: " + error.message);

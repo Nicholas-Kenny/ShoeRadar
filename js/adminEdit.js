@@ -48,10 +48,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         .getElementById("shoeDescription")
         .value.trim();
       const image_url = document.getElementById("shoeImage").value.trim();
+      const release_date =
+        document.getElementById("shoeReleaseDate").value || null;
+      const status = document.getElementById("productStatus").value;
 
       const { error } = await window.db
         .from("shoes")
-        .update({ name, category, price, description, image_url })
+        .update({
+          name,
+          category,
+          price,
+          description,
+          image_url,
+          release_date,
+          status,
+        })
         .eq("id", shoeId);
 
       if (error) alert("Error updating shoe: " + error.message);
@@ -113,6 +124,8 @@ async function loadShoeData(id) {
   document.getElementById("shoePrice").value = data.price || "";
   document.getElementById("shoeDescription").value = data.description || "";
   document.getElementById("shoeImage").value = data.image_url || "";
+  document.getElementById("shoeReleaseDate").value = data.release_date || "";
+  document.getElementById("productStatus").value = data.status || "regular";
 }
 
 // Fungsi menarik daftar toko (untuk opsi Select Dropdown)

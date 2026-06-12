@@ -164,105 +164,52 @@
         </div>
     </footer>
 </body>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const addToCartBtn =
-        document.querySelector(".add_to_cart");
-
-    addToCartBtn.addEventListener("click", () => {
-
-        const shoe = {
-            id: document
-                .querySelector(".shoe_name")
-                .textContent
-                .trim(),
-
-            name: document
-                .querySelector(".shoe_name")
-                .textContent
-                .trim(),
-
-            category: document
-                .querySelector(".shoe_category")
-                .textContent
-                .trim(),
-
-            price: Number(
-                document
-                    .querySelector(".shoe_price")
-                    .textContent
-                    .replace("Rp", "")
-                    .replace(/\./g, "")
-                    .replace(/,/g, "")
-                    .trim()
-            ),
-
-            image: document
-                .querySelector(".left img")
-                .getAttribute("src"),
-
-            quantity: 1
-        };
-
-        let cart =
-            JSON.parse(
-                localStorage.getItem("cart")
-            ) || [];
-
-        const existing =
-            cart.find(item =>
-                item.id === shoe.id
-            );
-
-        if(existing){
-            existing.quantity += 1;
-        }
-        else{
-            cart.push(shoe);
-        }
-
-        localStorage.setItem(
-            "cart",
-            JSON.stringify(cart)
-        );
-
-        alert(`${shoe.name} added to cart!`);
-    });
-
-});
-</script>
-<script src="./js/products.js"></script>
-<script>
-const params =
-    new URLSearchParams(window.location.search);
-
-const id =
-    params.get("id");
-
-const shoe =
-    products[id];
-
-if(shoe){
-
-    document.querySelector(".shoe_name")
-        .textContent = shoe.name;
-
-    document.querySelector(".shoe_category")
-        .textContent = shoe.category;
-
-    document.querySelector(".shoe_price")
-        .textContent =
-        "Rp " +
-        shoe.price.toLocaleString("id-ID");
-
-    document.querySelector(".shoe_image")
-        .src = shoe.image;
-}
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="./js/supabaseClient.js"></script>
-<script src="./js/shoeDetail.js"></script>
-<script src="./js/logout.js"></script>
-<script src="./js/searchShoes.js"></script>
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/shoeDetail.js"></script>
+  <script src="./js/logout.js"></script>
+  <script src="./js/searchShoes.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const addToCartBtn = document.querySelector(".add_to_cart");
+
+      if (addToCartBtn) {
+          addToCartBtn.addEventListener("click", () => {
+              // Ambil UUID asli dari parameter URL (?id=...)
+              const params = new URLSearchParams(window.location.search);
+              const shoeId = params.get("id");
+
+              if (!shoeId) return alert("Product ID not found!");
+
+              const shoe = {
+                  id: shoeId, // Menggunakan UUID Supabase asli
+                  name: document.getElementById("detailName").textContent.trim(),
+                  category: document.getElementById("detailCategory").textContent.trim(),
+                  price: Number(
+                      document.getElementById("detailPrice")
+                          .textContent
+                          .replace("Rp", "")
+                          .replace(/\./g, "")
+                          .trim()
+                  ),
+                  image: document.querySelector(".left img").getAttribute("src"),
+                  quantity: 1
+              };
+
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              const existing = cart.find(item => item.id === shoe.id);
+
+              if (existing) {
+                  existing.quantity += 1;
+              } else {
+                  cart.push(shoe);
+              }
+
+              localStorage.setItem("cart", JSON.stringify(cart));
+              alert(`${shoe.name} added to cart!`);
+          });
+      }
+  });
+  </script>
 </html>

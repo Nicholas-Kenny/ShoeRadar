@@ -1,239 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="./css/RESET.css">
-    <link rel="stylesheet" href="./css/GLOBAL.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/RESET.css" />
+    <link rel="stylesheet" href="./css/GLOBAL.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header id="header">
-        <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo">
+      <img src="./images/shoeradar_logo_2.png" alt="shoeradar_logo" />
 
-        <div class="middle_header">
-            <nav id="nav">
-                <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./new_releases.html">New Releases</a></li>
-                    <li><a href="./collections.html">Collections</a></li>
-                    <li><a href="./locations.html">Locations</a></li>
-                </ul>
-            </nav>
+      <div class="middle_header">
+        <nav id="nav">
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./new_releases.html">New Releases</a></li>
+            <li><a href="./collections.html">Collections</a></li>
+            <li><a href="./locations.html">Locations</a></li>
+          </ul>
+        </nav>
 
-            <nav id="right_nav">
-                
-                <div class="search_box">
-                    <input type="text" placeholder="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/></svg>
-                </div>
+        <nav id="right_nav">
+          <div class="search_box">
+            <input type="text" placeholder="Search" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"
+              />
+            </svg>
+          </div>
 
-                <a href="#">
-                    <div class="cart-active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                                <path d="M3 6h18l-2 13H5L3 6z"/>
-                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                                <path d="M10 10v4"/>
-                                <path d="M14 10v4"/>
-                            </g>
-                        </svg>
-                    </div>
-                </a>
-                
-                <button id="logoutBtn">Logout</button>
-                <div class="profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"/><path d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
-                </div>
-            </nav>
-            
-        </div>    
+          <a href="#">
+            <div class="cart-active">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 6h18l-2 13H5L3 6z" />
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  <path d="M10 10v4" />
+                  <path d="M14 10v4" />
+                </g>
+              </svg>
+            </div>
+          </a>
 
-        
+          <button id="logoutBtn">Logout</button>
+          <div class="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2"
+                />
+                <path
+                  d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"
+                />
+              </g>
+            </svg>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <section class="cart-main">
+        <div class="cart-container">
+          <!-- Bagian kiri -->
+          <section class="cart-items-section">
+            <h1 class="cart-title">Cart</h1>
+          </section>
 
-        <section class="cart-main">
+          <!-- Bagian kanan -->
+          <aside class="cart-sidebar">
+            <div class="sidebar-card">
+              <h2>Order Detail</h2>
 
-            <div class="cart-container">
+              <div id="order-summary-container"></div>
 
-                <!-- Bagian kiri -->
-                <section class="cart-items-section">
-                    <h1 class="cart-title">Cart</h1>
+              <!-- Toggle -->
+              <div class="delivery-toggle-group">
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="delivery_method"
+                    value="pickup"
+                    onchange="toggleOrderMethod()"
+                  />
+                  Pick Up
+                </label>
 
-                    <!-- Item 1 -->
-                    <!-- <div class="cart-item">
-                        <input type="checkbox" class="custom-checkbox">
-                        <img src="./images/home_shoes/trending_now2(G.T. Future EP).png" alt="Nike G.T. Future EP" class="item-img">
-                        <div class="item-details">
-                            <h3>Nike G.T. Future EP</h3>
-                            <p class="item-category">Basketball Shoes</p>
-                            <p class="item-price">Rp 3.049.000</p>
-                        </div>
-                        <div class="item-actions">
-                            <div class="quantity-control">
-                                <button class="qty-btn">-</button>
-                                <span class="qty-num">1</span>
-                                <button class="qty-btn">+</button>
-                            </div>
-                            <div class="action-icons">
-                                <button class="icon-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7m-4.5-9.5L13.5 14L10 14l-.5-3.5l8.5-8.5a1.5 1.5 0 0 1 2.121 2.121Z"/></svg>
-                                </button>
-                                <button class="icon-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div> -->
+                <!-- Pick Up -->
+                <div
+                  id="pickup-options"
+                  class="dynamic-content"
+                  style="display: none"
+                >
+                  <p class="sub-label">Location</p>
+                  <div class="location-radios">
+                    <label
+                      ><input
+                        type="radio"
+                        name="location"
+                        value="grand_indonesia"
+                      />
+                      Nike Grand Indonesia</label
+                    >
+                    <label
+                      ><input
+                        type="radio"
+                        name="location"
+                        value="kelapa_gading"
+                        checked
+                      />
+                      Nike Mall Kelapa Gading</label
+                    >
+                  </div>
+                </div>
 
-                    <!-- Item 2 -->
-                    <!-- <div class="cart-item">
-                        <input type="checkbox" class="custom-checkbox" checked>
-                        <img src="./images/home_shoes/trending_now3(GP Challenge Pro).png" alt="Nike GP Challenge Pro" class="item-img">
-                        <div class="item-details">
-                            <h3>Nike GP Challenge Pro</h3>
-                            <p class="item-category">Men's Tennis Shoes</p>
-                            <p class="item-price">Rp 1.729.000</p>
-                        </div>
-                        <div class="item-actions">
-                            <div class="quantity-control">
-                                <button class="qty-btn">-</button>
-                                <span class="qty-num">1</span>
-                                <button class="qty-btn">+</button>
-                            </div>
-                            <div class="action-icons">
-                                <button class="icon-btn">
-                                    <!-- Edit Iion -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7m-4.5-9.5L13.5 14L10 14l-.5-3.5l8.5-8.5a1.5 1.5 0 0 1 2.121 2.121Z"/></svg>
-                                </button>
-                                <button class="icon-btn">
-                                    <!-- Trash icon -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div> -->
-                    
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="delivery_method"
+                    id="radio-delivery"
+                    value="delivery"
+                    checked
+                    onchange="toggleOrderMethod()"
+                  />
+                  Delivery
+                </label>
 
-                </section>
+                <!-- Delivery -->
+                <div id="delivery-options" class="dynamic-content">
+                  <p class="sub-label">Address</p>
+                  <input
+                    type="text"
+                    class="rounded-input"
+                    placeholder="Fill in your address ..."
+                  />
+                  <p class="sub-label">Phone number</p>
+                  <input
+                    type="text"
+                    class="rounded-input"
+                    placeholder="08xxxxxxxxx"
+                  />
+                </div>
+              </div>
 
-                <!-- Bagian kanan -->
-                <aside class="cart-sidebar">
-                    
-                    <div class="sidebar-card">
-                        <h2>Order Detail</h2>
-                        
-                        <div id="order-summary-container"></div>
+              <div class="price-breakdown">
+                <div class="price-row">
+                  <span>Product price</span>
+                  <span>Rp 1.729.000</span>
+                </div>
+                <div class="price-row extra-fee">
+                  <span>Shipping costs</span>
+                  <span>Rp 30.000</span>
+                </div>
+                <div class="price-row extra-fee">
+                  <span>Service fee</span>
+                  <span>Rp 5.000</span>
+                </div>
 
-                        <!-- Toggle -->
-                        <div class="delivery-toggle-group">
-                            <label class="radio-label">
-                                <input type="radio" name="delivery_method" value="pickup" onchange="toggleOrderMethod()"> Pick Up
-                            </label>
-                            
-                            <!-- Pick Up -->
-                            <div id="pickup-options" class="dynamic-content" style="display: none;">
-                                <p class="sub-label">Location</p>
-                                <div class="location-radios">
-                                    <label><input type="radio" name="location" value="grand_indonesia"> Nike Grand Indonesia</label>
-                                    <label><input type="radio" name="location" value="kelapa_gading" checked> Nike Mall Kelapa Gading</label>
-                                </div>
-                            </div>
-
-                            <label class="radio-label">
-                                <input type="radio" name="delivery_method" id="radio-delivery" value="delivery" checked onchange="toggleOrderMethod()"> Delivery
-                            </label>
-
-                            <!-- Delivery -->
-                            <div id="delivery-options" class="dynamic-content">
-                                <p class="sub-label">Address</p>
-                                <input type="text" class="rounded-input" placeholder="Fill in your address ...">
-                                <p class="sub-label">Phone number</p>
-                                <input type="text" class="rounded-input" placeholder="08xxxxxxxxx">
-                            </div>
-                        </div>
-
-                        <div class="price-breakdown">
-                            <div class="price-row">
-                                <span>Product price</span>
-                                <span>Rp 1.729.000</span>
-                            </div>
-                            <div class="price-row extra-fee">
-                                <span>Shipping costs</span>
-                                <span>Rp 30.000</span>
-                            </div>
-                            <div class="price-row extra-fee">
-                                <span>Service fee</span>
-                                <span>Rp 5.000</span>
-                            </div>
-                            
-                            <div class="price-row total-row">
-                                <span>Total</span>
-                                <span id="final-total">Rp 1.764.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-card">
-                        <h2>Payment method</h2>
-                        <div class="payment-options">
-                            <label class="radio-label"><input type="radio" name="payment_method"> BCA Virtual Account</label>
-                            <label class="radio-label"><input type="radio" name="payment_method" checked> Cash on Delivery</label>
-                            <label class="radio-label"><input type="radio" name="payment_method"> GoPay</label>
-                        </div>
-                        
-                        <div class="checkout-action">
-                            <button class="place-order-btn">Place Order</button>
-                        </div>
-                    </div>
-
-                </aside>
+                <div class="price-row total-row">
+                  <span>Total</span>
+                  <span id="final-total">Rp 1.764.000</span>
+                </div>
+              </div>
             </div>
-        </section>
-        
+
+            <div class="sidebar-card">
+              <h2>Payment method</h2>
+              <div class="payment-options">
+                <label class="radio-label"
+                  ><input type="radio" name="payment_method" /> BCA Virtual
+                  Account</label
+                >
+                <label class="radio-label"
+                  ><input type="radio" name="payment_method" checked /> Cash on
+                  Delivery</label
+                >
+                <label class="radio-label"
+                  ><input type="radio" name="payment_method" /> GoPay</label
+                >
+              </div>
+
+              <div class="checkout-action">
+                <button id="checkoutBtn" class="place-order-btn">
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="left_footer">
-            <div class="column">
-                <h5>Help</h5>
-                <a href="">FAQ</a>
-                <a href="">Contact Us</a>
-            </div>
-
-            <div class="column">
-                <h5>Company</h5>
-                <a href="">About Nike</a>
-                <a href="">New Releases</a>
-            </div>
-            
-            <div class="column">
-                <h5>Terms and Conditions</h5>
-                <a href="">Privacy Policy</a>
-                <a href="">Cookie Policy</a>
-                <a href="">Legal Notice</a>
-            </div>
+      <div class="left_footer">
+        <div class="column">
+          <h5>Help</h5>
+          <a href="">FAQ</a>
+          <a href="">Contact Us</a>
         </div>
 
-        <div class="right_footer">
-            <img src="./images/shoeradar_logo_2.png" alt="shoe_radar_logo">
-            <p>@ShoeRadar 2026. All Rights Reserved.</p>
+        <div class="column">
+          <h5>Company</h5>
+          <a href="">About Nike</a>
+          <a href="">New Releases</a>
         </div>
+
+        <div class="column">
+          <h5>Terms and Conditions</h5>
+          <a href="">Privacy Policy</a>
+          <a href="">Cookie Policy</a>
+          <a href="">Legal Notice</a>
+        </div>
+      </div>
+
+      <div class="right_footer">
+        <img src="./images/shoeradar_logo_2.png" alt="shoe_radar_logo" />
+        <p>@ShoeRadar 2026. All Rights Reserved.</p>
+      </div>
     </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="./js/supabaseClient.js"></script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="./js/supabaseClient.js"></script>
 
-<script src="./js/authCheck.js"></script>
+  <script src="./js/authCheck.js"></script>
 
-<script src="./js/logout.js"></script>
-<script src="./js/cart.js"></script>
-<script src="./js/searchShoes.js"></script>
+  <script src="./js/logout.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/searchShoes.js"></script>
 </html>

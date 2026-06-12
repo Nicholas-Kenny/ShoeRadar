@@ -1,58 +1,40 @@
-const form =
-    document.getElementById("addProductForm");
+const form = document.getElementById("addProductForm");
 
-form.addEventListener(
-    "submit",
-    async (e) => {
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-        e.preventDefault();
+  const name = document.getElementById("shoeName").value;
 
-        const name =
-            document.getElementById("shoeName").value;
+  const price = Number(document.getElementById("shoePrice").value);
 
-        const price =
-            Number(
-                document.getElementById("shoePrice").value
-            );
+  const stock = Number(document.getElementById("shoeStock").value);
 
-        const stock =
-            Number(
-                document.getElementById("shoeStock").value
-            );
+  const description = document.getElementById("shoeDescription").value;
 
-        const description =
-            document.getElementById("shoeDescription").value;
+  const location = document.getElementById("shoeLocation").value;
 
-        const location =
-            document.getElementById("shoeLocation").value;
+  const image = document.getElementById("shoeImage").value;
 
-        const image =
-            document.getElementById("shoeImage").value;
+  const { data, error } = await window.db.from("shoes").insert([
+    {
+      name,
+      price,
+      stock,
+      description,
+      location,
+      image,
+    },
+  ]);
 
-        const { data, error } =
-            await window.db
-                .from("shoes")
-                .insert([
-                    {
-                        name,
-                        price,
-                        stock,
-                        description,
-                        location,
-                        image
-                    }
-                ]);
+  console.log(data);
+  console.log(error);
 
-        console.log(data);
-        console.log(error);
+  if (error) {
+    alert(error.message);
+    return;
+  }
 
-        if(error){
-            alert(error.message);
-            return;
-        }
+  alert("Product Added!");
 
-        alert("Product Added!");
-
-        form.reset();
-    }
-);
+  form.reset();
+});

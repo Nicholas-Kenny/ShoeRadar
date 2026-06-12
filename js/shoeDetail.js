@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     storeSelector.appendChild(option);
   }
 
-  // --- TAMBAHAN: Event Listener untuk menampilkan stok ---
   storeSelector.addEventListener("change", (e) => {
     const stock = e.target.value;
     if (stockDisplay) {

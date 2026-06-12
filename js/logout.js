@@ -1,14 +1,3 @@
-// document
-//     .getElementById("logoutBtn")
-//     .addEventListener("click", () => {
-
-//         localStorage.removeItem("currentUser");
-
-//         alert("Logged out successfully");
-
-//         window.location.href = "index.html";
-//     });
-
 // Wait for DOM to load in case the button isn't rendered immediately
 document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("logoutBtn");
